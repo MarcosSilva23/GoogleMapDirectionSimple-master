@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context="com.itshareplus.googlemapdemo.CalculoActivity"
+    android:orientation="vertical"
+    android:id="@+id/fundoTela"
+    android:weightSum="1">
+
+    <ImageView
+
+        android:id="@+id/logo"
+        android:src="@drawable/motofrete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        />
+
+
+    <EditText
+        android:id="@+id/txtDist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned|numberDecimal"
+        android:hint="Distância (km)"
+        android:background="#FFFFFF"
+        android:layout_weight="0.14" />
+
+
+
+    <EditText
+        android:id="@+id/txtConsumo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned|numberDecimal"
+        android:hint="Consumo (Litros por Km)"
+        android:background="#FFFFFF"
+        android:layout_weight="0.14" />
+
+    <EditText
+        android:id="@+id/txtLitroGas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned|numberDecimal"
+        android:hint="Valor Litro Gasolina (R$)"
+        android:background="#FFFFFF"
+        android:layout_weight="0.14" />
+
+    <EditText
+        android:id="@+id/txtLucro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned|numberDecimal"
+        android:hint="Lucro Pretendido (R$)"
+        android:background="#FFFFFF"
+        android:layout_weight="0.14" />
+
+
+
+        <Button
+            android:id="@+id/btnConsultaFrete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="calcClick"
+            android:text="Consultar Frete" />
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnAjustaTela"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1"
+            android:onClick="calcClick"
+            android:text="Tela Padrão" />
+
+        <Button
+            android:id="@+id/btnBateria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1"
+            android:onClick="calcClick"
+            android:text="Economia de Bateria" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnHistorico"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="consultaHistorico"
+        android:text="Histórico de Consultas" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnSalvar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="salvarHistorico"
+            android:text="Salvar" />
+
+        <Button
+            android:id="@+id/btnExcluir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1"
+            android:onClick="excluirFrete"
+            android:text="Excluir" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
